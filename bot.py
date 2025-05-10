@@ -377,6 +377,8 @@ async def main():
     asyncio.create_task(check_expired_sessions())  
     await dp.start_polling(bot)
 
+    asyncio.run(drop_webhook())
+
 if __name__ == "__main__":
     import asyncio
     asyncio.run(main())
